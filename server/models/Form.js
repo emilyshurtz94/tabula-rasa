@@ -1,11 +1,20 @@
-const { Schema, model } = require('mongoose');
+const { Schema, model, Types } = require('mongoose');
 
-const formSchema = new Schema({
-    music: {
+const dailyFormSchema = new Schema({
 
+    formID: {
+        type: Schema.Types.ObjectId,
+        Default: () => new Types.ObjectId()        
     },
+
+    music: {
+        type: Boolean
+        
+    },
+
+
     
 
 })
 
-module.exports = Form;
+module.exports = dailyFormSchema;

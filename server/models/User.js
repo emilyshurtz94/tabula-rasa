@@ -1,6 +1,7 @@
 const { Schema, model } = require('mongoose');
+const dailyFormSchema = require('./Form');
 
-const signUpSchema = new Schema({
+const userSchema = new Schema({
 
     username: {
         type: String,
@@ -15,9 +16,13 @@ const signUpSchema = new Schema({
     password: {
         type: String,
         required: true
-    }
+    },
+
+    dailyForm: [
+        dailyFormSchema
+    ]
 })
 
-const Signup = model('Signup', signUpSchema);
+const User = model('User', userSchema);
 
-module.exports = Signup;
+module.exports = User;
