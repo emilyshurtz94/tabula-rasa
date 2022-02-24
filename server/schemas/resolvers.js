@@ -31,7 +31,7 @@ const resolvers = {
       const correctPw = await user.isCorrectPassword(password);
 
       if (!correctPw) {
-        throw new AuthenticationError('Incorrect password!');
+        throw new AuthenticationError( 'Incorrect password!' );
       }
 
       const token = signToken(user);
@@ -41,7 +41,7 @@ const resolvers = {
       if (context.user) {
         return User.findOneAndDelete({ _id: context.user._id });
       }
-       throw new AuthenticationError('You need to be logged in!');
+       throw new AuthenticationError( 'You need to be logged in!'  );
     },
   },
 };
