@@ -12,8 +12,9 @@ type User {
 type dailyFormSchema {
     formID: ID
     music: Boolean
-
-
+    workout: Boolean
+    meditation: Boolean
+    recap: [recapSchema]
 }
 
 type Auth {
@@ -24,7 +25,7 @@ type Auth {
 
 type Query {
     me: User
-
+    form: Form
 }
 
 type Mutation {
