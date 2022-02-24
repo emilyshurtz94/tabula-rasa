@@ -20,6 +20,7 @@ const resolvers = {
 
       return { token, user };
     },
+
     login: async (parent, { username, password }) => {
       const user = await User.findOne({ username });
 
