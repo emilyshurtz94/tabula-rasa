@@ -9,6 +9,7 @@ const dailyFormSchema = new Schema({
   music: [
     {
       type: Boolean,
+      recap: Date
     }
   ],
 
@@ -25,10 +26,6 @@ const dailyFormSchema = new Schema({
   meditation: {
     type: Boolean,
   },
-
-  recap: [
-    recapSchema
-  ]
 });
 
 module.exports = dailyFormSchema;
