@@ -2,35 +2,6 @@ const { Schema, model } = require("mongoose");
 const dailyFormSchema = require("./Form");
 const bcrypt = require("bcrypt");
 require('moment');
-// const musicSchema = new Schema({
-//   music: [
-//     {
-//       type: Boolean,
-//       recap: Date
-//     },
-    
-//   ],
-// });
-
-// const workoutSchema = new Schema({
-//   workout: {
-//     type: Boolean,
-//   },
-// });
-
-// const mealsSchema = new Schema({
-//   meals: [
-//     {
-//       type: Boolean,
-//     },
-//   ],
-// });
-
-// const meditationSchema = new Schema({
-//   meditation: {
-//     type: Boolean,
-//   },
-// });
 
 const userSchema = new Schema({
   username: {
@@ -52,6 +23,33 @@ const userSchema = new Schema({
   },
 
   dailyForm: [dailyFormSchema],
+
+  settings: {
+    music:{
+      type:Boolean,
+      default:false,
+    },
+    meals:{
+      type:Boolean,
+      default:false
+    },
+    substance:{
+      type:Boolean,
+      default:false
+    },
+    meditation:{
+      type:Boolean,
+      default:false
+    },
+    exercise:{
+      type:Boolean,
+      default:false
+    },
+    reminders:{
+      type:Boolean,
+      default:false
+    }
+  }
 });
 
 profileSchema.pre("save", async function (next) {
