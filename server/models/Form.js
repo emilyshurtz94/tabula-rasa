@@ -6,10 +6,11 @@ const dailyFormSchema = new Schema({
     type: Schema.Types.ObjectId,
     Default: () => new Types.ObjectId(),
   },
-  // feeling:{
-  //   type: ""
-    
-  // },
+
+  feeling:{
+    type:Int
+  },
+
   createdAt:{
     type: Date,
     default: Date.now,

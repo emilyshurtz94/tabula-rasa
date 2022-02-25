@@ -57,6 +57,13 @@ const resolvers = {
           )
       }
     },
+    addDailyForm: async (parent, {dailyFormSchema}, context) =>{
+      if(context.user){
+        return User.findOneAndUpdate({_id: context.user._id},
+          {dailyForm:{dailyFormSchema}}
+          )
+      }
+    },
   },
 };
 
