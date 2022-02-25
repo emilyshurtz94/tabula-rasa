@@ -16,44 +16,44 @@ export default function Daily() {
                             <form action="#">
                                 <p>
                                     <label>
-                                        <input name="upset" type="radio" />
+                                        <input name="upset" type="radio" value="1" />
                                         <span><i class="material-icons">mood_bad</i> Upset</span>
                                     </label>
                                 </p>
                                 <p>
                                     <label>
-                                        <input name="mad" type="radio" />
+                                        <input name="mad" type="radio" value="2" />
                                         <span><i class="material-icons">sentiment_very_dissatisfied</i> Mad</span>
                                     </label>
                                 </p>
                                 <p>
                                     <label>
-                                        <input name="sad" type="radio" />
+                                        <input name="sad" type="radio" value="3" />
                                         <span><i class="material-icons">sentiment_dissatisfied
                                         </i> Sad</span>
                                     </label>
                                 </p>
                                 <p>
                                     <label>
-                                        <input name="not_great" type="radio" />
+                                        <input name="not_great" type="radio" value="4" />
                                         <span><i class="material-icons">sentiment_neutral</i> Not Great</span>
                                     </label>
                                 </p>
                                 <p>
                                     <label>
-                                        <input name="okay" type="radio" />
+                                        <input name="okay" type="radio" value="5" />
                                         <span><i class="material-icons">sentiment_satisfied</i> Okay</span>
                                     </label>
                                 </p>
                                 <p>
                                     <label>
-                                        <input name="happy" type="radio" />
+                                        <input name="happy" type="radio" value="6" />
                                         <span><i class="material-icons">sentiment_very_satisfied</i> Happy</span>
                                     </label>
                                 </p>
                                 <p>
                                     <label>
-                                        <input name="excited" type="radio" />
+                                        <input name="excited" type="radio" value="7" />
                                         <span><i class="material-icons">mood</i> Excited</span>
                                     </label>
                                 </p>

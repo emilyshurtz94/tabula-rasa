@@ -2,11 +2,12 @@ import React, { useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { ApolloClient, ApolloProvider, InMemoryCache } from "@apollo/client";
 import Home from "./pages/Home";
-import Form from "./pages/Form";
+import Settings from "./pages/Settings";
 import User from "./pages/User";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Quote from "./components/Quote";
+import Daily from "./pages/Daily"
 
 
 
@@ -27,8 +28,9 @@ export default function App() {
             <Header />
             <Quote />
             <Route path="/" element={<Home />} />
-            <Route path="/form" element={<Form />} />
+            <Route path="/settings" element={<Settings />} />
             <Route path="/user" element={<User />} />
+            <Route path="/daily" element={<Daily />} />
             <Route path="/recap" element={<Recap />} />
             <Route path="*" element={<NotFound />} />
             <Footer />

@@ -20,9 +20,8 @@ input SettingsInput{
 
 type dailyFormSchema {
     formID: ID
-    feeling:
+    feeling: Int
     createdAt: Date
-    recap: [recapSchema]
 }
 
 type Auth {
@@ -42,6 +41,7 @@ type Mutation {
     login(username: String!, password: String!): Auth
     removeUser: User
     updateSettings:(settingsData: SettingsInput!): User
+    addDailyForm:(dailyForm: dailyFormSchema!): User
   }`;
 
 module.exports = typeDefs;
