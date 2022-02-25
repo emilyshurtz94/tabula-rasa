@@ -2,7 +2,7 @@ import React from 'react';
 import useFetch from 'react-fetch-hook';
 
 
-function Music() {
+export default function Music() {
 
   return (
 
