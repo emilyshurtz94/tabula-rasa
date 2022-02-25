@@ -31,10 +31,10 @@ export default function App() {
   return (
     <ApolloProvider client={client}>
       <Router>
-        <Navbar />
+      <Navbar />
         <Switch>
           <Routes>
-            <Navbar />
+           
             <Header />
             <Quote />
             <Route path="/" element={<Home />} />
