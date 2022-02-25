@@ -1,5 +1,5 @@
 import React from 'react';
-import Form from '../pages/Form'
+import Settings from '../pages/Settings'
 
 export default function Nav() {
   (function($){
@@ -30,7 +30,7 @@ export default function Nav() {
           <li><a href="#">Meals</a></li>
           <li><a href="#">Therapy</a></li>
           <li><a href="#">Substance Usage</a></li>
-          <li><a href= {Form}>Change Preferences</a></li>
+          <li><a href= {Settings}>Change Preferences</a></li>
         </ul>
         <ul id="nav-mobile" class="sidenav">
           <li><a href="#">Logout</a></li>
@@ -43,7 +43,7 @@ export default function Nav() {
           <li><a href="#">Meals</a></li>
           <li><a href="#">Therapy</a></li>
           <li><a href="#">Substance Usage</a></li>
-          <li><a href={Form}>Change Preferences</a></li>
+          <li><a href={Settings}>Change Preferences</a></li>
         </ul>
         <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
       </div>

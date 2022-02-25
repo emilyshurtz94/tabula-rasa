@@ -5,20 +5,24 @@ import useFetch from 'react-fetch-hook';
 function Music() {
 
   return (
-    <div class="row">
-    <div class="col s12 m6">
-      <div class="card blue-grey darken-1">
-        <div class="card-content white-text">
-          <span class="card-title">Music</span>
-        </div>
-        <div class="card-action">
-          <a href="https://accounts.spotify.com/en/login">Spotify</a>
-          <a href="https://music.apple.com/login">Apple Music</a>
+
+    <div>
+      <div class="col s6 m6">
+        <div class="card">
+          <div class="card-image">
+            <img src="./images/music.jpeg"></img>
+              <span class="card-title">Music</span>
+          </div>
+          <div class="card-content">
+            <p class="black-text"> Music can calm the mind and soul</p>
+          </div>
+          <div class="card-action">
+            <a href="https://accounts.spotify.com/en/login">Spotify</a>
+            <a href="https://music.apple.com/login">Apple Music</a>
+          </div>
         </div>
       </div>
     </div>
-  </div>
+
   )
 }
-
-export default Music
