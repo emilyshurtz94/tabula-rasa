@@ -1,7 +1,8 @@
 import React from 'react';
 import Settings from '../pages/Settings'
+import $ from 'jquery';
 
-export default function Nav() {
+export default function Header() {
   (function($){
     $(function(){
       $(".dropdown-trigger").dropdown();
@@ -9,7 +10,7 @@ export default function Nav() {
       $('.parallax').parallax();
   
     })
-  })(jQuery);
+  })($);
 
   
     return (

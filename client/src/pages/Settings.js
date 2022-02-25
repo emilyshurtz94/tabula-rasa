@@ -1,6 +1,7 @@
-import React from 'react';
+import React,  {useState} from 'react';
 
 export default function Settings (){
+ const [settingsData, setSettingsData] = useState({})
 
 
 return (
@@ -11,7 +12,7 @@ return (
         <h3 style="align-items: center;">Select what you need to help you everyday</h3>
       </div>
       <div class="switch">
-        <label>
+        <label onClick={(e)=>console.log(e.target)}>
           <h4>Music</h4>
           No
           <input type="checkbox"></input>
@@ -20,7 +21,7 @@ return (
         </label>
       </div>
       <div class="switch">
-        <label>
+        <label >
           <h4>Meals</h4>
           No
           <input type="checkbox"></input>
