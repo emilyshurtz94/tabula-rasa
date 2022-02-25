@@ -1,15 +1,24 @@
 const { gql } = require('apollo-server-express');
 
 const typeDefs = gql`
+input SettingsInput{
+    music:Boolean
+    meals:Boolean
+    substance:Boolean
+    meditation:Boolean
+    exercise:Boolean
+    reminders:Boolean
+}
 type User {
     _id: ID
     username: String!
     email: String!
     password: String!
     dailyForm: [dailyFormSchema]
-    settings: SettingsInput
+    settings: [Settings]
 }
-input SettingsInput{
+
+type Settings{
     music:Boolean
     meals:Boolean
     substance:Boolean
@@ -20,9 +29,7 @@ input SettingsInput{
 
 type dailyFormSchema {
     formID: ID
-    feeling:
-    createdAt: Date
-    recap: [recapSchema]
+    createdAt: String
 }
 
 type Auth {
@@ -33,7 +40,7 @@ type Auth {
 
 type Query {
     me: User
-    recap: Form
+    recap: User
 }
 
 type Mutation {
@@ -41,7 +48,7 @@ type Mutation {
     signUp(username: String!, email: String!, password: String!): Auth
     login(username: String!, password: String!): Auth
     removeUser: User
-    updateSettings:(settingsData: SettingsInput!): User
+    updateSettings(input: SettingsInput!): User
   }`;
 
 module.exports = typeDefs;

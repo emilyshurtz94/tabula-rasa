@@ -6,12 +6,12 @@ const dailyFormSchema = new Schema({
     type: Schema.Types.ObjectId,
     Default: () => new Types.ObjectId(),
   },
-  feeling:{
-    type:
+  // feeling:{
+  //   type: ""
     
-  },
+  // },
   createdAt:{
-    type:Date,
+    type: Date,
     default: Date.now,
     get:(timestamp) => dateFormat(timestamp)
   }
