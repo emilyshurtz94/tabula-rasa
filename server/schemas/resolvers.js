@@ -14,7 +14,7 @@ const resolvers = {
     },
     recap: async (parent, args, context) => {
         if (context.user) {
-            return User.findOne({ _id: context.user._id }).get(dailyFormSchema)
+            return User.findOne({ _id: context.user._id })
         }
         throw new AuthenticationError('You need to be logged in!');
     }
@@ -49,6 +49,13 @@ const resolvers = {
         return User.findOneAndDelete({ _id: context.user._id });
       }
        throw new AuthenticationError( 'You need to be logged in!'  );
+    },
+    updateSettings: async (parent, {settingsData}, context) =>{
+      if(context.user){
+        return User.findOneAndUpdate({_id: context.user._id},
+          {settings:{settingsData}}
+          )
+      }
     },
   },
 };
