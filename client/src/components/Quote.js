@@ -9,7 +9,7 @@ function Quote() {
 
 
   return (
-    <div>{quote}</div>
+    <div>{quote, author}</div>
   )
 }
 
