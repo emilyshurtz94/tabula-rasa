@@ -14,7 +14,7 @@ return (
         <label>
           <h4>Music</h4>
           No
-          <input type="checkbox">
+          <input type="checkbox"></input>
           <span class="lever"></span>
           Yes
         </label>
@@ -23,7 +23,7 @@ return (
         <label>
           <h4>Meals</h4>
           No
-          <input type="checkbox">
+          <input type="checkbox"></input>
           <span class="lever"></span>
           Yes
         </label>
@@ -32,7 +32,7 @@ return (
         <label>
           <h4>Substance Use</h4>
           No
-          <input type="checkbox">
+          <input type="checkbox"></input>
           <span class="lever"></span>
           Yes
         </label>
@@ -41,7 +41,7 @@ return (
         <label>
           <h4>Meditation</h4>
           No
-          <input type="checkbox">
+          <input type="checkbox"></input>
           <span class="lever"></span>
           Yes
         </label>
@@ -50,7 +50,7 @@ return (
         <label>
           <h4>Exercise</h4>
           No
-          <input type="checkbox">
+          <input type="checkbox"></input>
           <span class="lever"></span>
           Yes
         </label>
@@ -80,7 +80,7 @@ return (
         <label>
           <h4>Daily Reminders</h4>
           No
-          <input type="checkbox">
+          <input type="checkbox"></input>
           <span class="lever"></span>
           Yes
         </label>
