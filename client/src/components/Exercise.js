@@ -14,7 +14,7 @@ function Exercise() {
                   <p class="black-text">Exercise can help the mind and body stay focused</p>
                 </div>
                 <div class="card-action">
-                  <a href="#">Workouts</a>
+                  <a href="https://www.fitnessblender.com/videos">Workouts</a>
                 </div>
               </div>
             </div>
