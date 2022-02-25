@@ -1,15 +1,23 @@
 import React from 'react';
 import useFetch from 'react-fetch-hook';
 
-function Music() {
-    const { isLoading, error, data } = useFetch("https://zenquotes.io/api/random");
-    const quoteData = data[0]
-    const quote = quoteData.q
-    const author = quoteData.a 
 
+function Music() {
 
   return (
-    <div>{music}</div>
+    <div class="row">
+    <div class="col s12 m6">
+      <div class="card blue-grey darken-1">
+        <div class="card-content white-text">
+          <span class="card-title">Music</span>
+        </div>
+        <div class="card-action">
+          <a href="https://accounts.spotify.com/en/login">Spotify</a>
+          <a href="https://music.apple.com/login">Apple Music</a>
+        </div>
+      </div>
+    </div>
+  </div>
   )
 }
 
