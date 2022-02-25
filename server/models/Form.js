@@ -7,8 +7,7 @@ const dailyFormSchema = new Schema({
     Default: () => new Types.ObjectId(),
   },
   feeling:{
-    type:
-    
+    type:Int
   },
   createdAt:{
     type:Date,
