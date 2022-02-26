@@ -1,3 +1,4 @@
+
 import React, { useState } from "react";
 
 export default function Settings() {
@@ -22,6 +23,7 @@ export default function Settings() {
     setSettingsForm({ ...settingsForm, [name]: checked });
     console.log(settingsForm);
   };
+
 
   const hStyle = {
     alignItems: "center",
