@@ -1,7 +1,5 @@
 import { gql } from '@apollo/client';
 
-import gql from 'graphql-tag';
-
 export const QUERY_USER = gql`
   {
     me {
@@ -12,6 +10,14 @@ export const QUERY_USER = gql`
         formID
         feeling
         createdAt
+      }
+      settings{
+        music
+        meals
+        substance
+        meditation
+        exercise
+        reminders
       }
     }
   }

@@ -3,17 +3,17 @@ import React from 'react'
 function Exercise() {
   return (
     <div>
-        <div class="col s6 m6">
-              <div class="card">
-                <div class="card-image">
-                  <img src="./images/exercise.jpeg"></img>
-                  <span class="card-title">Exercise</span>
+        <div className="col s6 m6">
+              <div className="card">
+                <div className="card-image">
+                  <img src="../images/exercise.jpeg" alt="exercising"></img>
+                  <span className="card-title">Exercise</span>
                 </div>
 
-                <div class="card-content">
-                  <p class="black-text">Exercise can help the mind and body stay focused</p>
+                <div className="card-content">
+                  <p className="black-text">Exercise can help the mind and body stay focused</p>
                 </div>
-                <div class="card-action">
+                <div className="card-action">
                   <a href="https://www.fitnessblender.com/videos">Workouts</a>
                 </div>
               </div>

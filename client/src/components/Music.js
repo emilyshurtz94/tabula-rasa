@@ -1,22 +1,20 @@
 import React from 'react';
-import useFetch from 'react-fetch-hook';
-
 
 export default function Music() {
 
   return (
 
     <div>
-      <div class="col s6 m6">
-        <div class="card">
-          <div class="card-image">
-            <img src="./images/music.jpeg"></img>
-              <span class="card-title">Music</span>
+      <div className="col s6 m6">
+        <div className="card">
+          <div className="card-image">
+            <img src="../images/music.jpeg" alt="waves-relaxation-music"></img>
+              <span className="card-title">Music</span>
           </div>
-          <div class="card-content">
-            <p class="black-text"> Music can calm the mind and soul</p>
+          <div className="card-content">
+            <p className="black-text"> Music can calm the mind and soul</p>
           </div>
-          <div class="card-action">
+          <div className="card-action">
             <a href="https://accounts.spotify.com/en/login">Spotify</a>
             <a href="https://music.apple.com/login">Apple Music</a>
           </div>

@@ -2,29 +2,29 @@ import React from "react";
 
 function SubstanceUse() {
   return (
-    <div class="col s6 m6">
-    <div class="card ">
-      <div class="card-image">
-        <img src="./images/Substance Free.png"></img>
-        <span class="card-title">Substance Free</span>
+    <div className="col s6 m6">
+    <div className="card ">
+      <div className="card-image">
+        <img src="../images/Substance Free.png" alt="substance-free-sign"></img>
+        <span className="card-title">Substance Free</span>
       </div>
-      <div class="card-content">
-        <p class="black-text">Staying substance free can help free the mind and body</p>
+      <div className="card-content">
+        <p className="black-text">Staying substance free can help free the mind and body</p>
       </div>
-      <div class="card-action">
+      <div className="card-action">
         <div>
           <div
-            class="gigacalculator"
+            className="gigacalculator"
             data-tool="/calculators/sobriety-calculator.php"
             data-width="450"
           >
-            <div class="gigacalctitle">Sobriety Calculator</div>
-            <div class="gigacalcfooter">
+            <div className="gigacalctitle">Sobriety Calculator</div>
+            <div className="gigacalcfooter">
               <a href="https://www.gigacalculator.com/calculators/sobriety-calculator.php">
                 Sobriety Calculator
               </a>{" "}
               by{" "}
-              <a class="gigacalclink" href="https://www.gigacalculator.com/">
+              <a className="gigacalclink" href="https://www.gigacalculator.com/">
                 GIGAcalculator.com
               </a>
             </div>
