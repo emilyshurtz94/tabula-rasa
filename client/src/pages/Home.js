@@ -5,36 +5,50 @@ function Home() {
 
   return (
     <div>
-      <div class="row">
-        <div class="parallax-container valign-wrapper">
-          <div class="col s12 m4">
-            <div class="icon-block">
-              <h2 class="center brown-text"><i class="material-icons">flash_on</i></h2>
-              <h5 class="center">Wellness</h5>
-              <p class="light">Tabula Rasa is more than just physical health. Take a wholistic approach to tracking your mental wellness by combining your favorite music, new recipes and workout ideas.</p>
+      <div id="index-banner" className="parallax-container">
+        <div className="section no-pad-bot">
+
+          <div className="container">
+            <h1 className="header center grey-text text-lighten-2">Welcome Guest.</h1>
+            <div className="row center">
+              <h5 className="header col s12 light">Each day is a clean slate.</h5>
+              <a className="waves-effect waves-light btn-large">Login</a>
+              <a className="waves-effect waves-light btn-large">Signup</a>
             </div>
           </div>
 
-          <div class="col s12 m4">
-            <div class="icon-block">
-              <h2 class="center brown-text"><i class="material-icons">group</i></h2>
-              <h5 class="center">Personalized</h5>
-              <p class="light">Set your own preferences daily to help keep a clear, focused mind. Do you want reminders to meditate? Drink water? Kicking habits? We'll help you track your personal goals. </p>
 
+          <div className="row">
+              <div className="col s4 m4">
+                <div className="icon-block">
+                  <h2 className="center brown-text"><i className="material-icons">flash_on</i></h2>
+                  <h5 className="center">Wellness</h5>
+                  <p className="light">Tabula Rasa is more than just physical health. Take a wholistic approach to tracking your mental wellness by combining your favorite music, new recipes and workout ideas.</p>
+                </div>
             </div>
+
+            <div className="col s4 m4">
+              <div className="icon-block">
+                <h2 className="center brown-text"><i className="material-icons">group</i></h2>
+                <h5 className="center">Personalized</h5>
+                <p className="light">Set your own preferences daily to help keep a clear, focused mind. Do you want reminders to meditate? Drink water? Kicking habits? We'll help you track your personal goals. </p>
+              </div>
+            </div>
+
+            <div className="col s4 m4">
+              <div className="icon-block">
+                <h2 className="center brown-text"><i className="material-icons">settings</i></h2>
+                <h5 className="center">Reflect</h5>
+                <p className="light">Take note of your daily goals. At the end of each month, check your progress and reflect. Work toward your daily goal and remember each day is a clean slate, Tabula Rasa.</p>
+              </div>
+            </div>
+            <div className="parallax"><img src="./images/gradient-blue.jpg" alt="calming blue green colors"></img></div>
           </div>
 
-          <div class="col s12 m4">
-            <div class="icon-block">
-              <h2 class="center brown-text"><i class="material-icons">settings</i></h2>
-              <h5 class="center">Reflect</h5>
-              <p class="light">Take note of your daily goals. At the end of each month, check your progress and reflect. Work toward your daily goal and remember each day is a clean slate, Tabula Rasa.</p>
-            </div>
-          </div>
-          <div class="parallax"><img src="./images/gradient-blue.jpg" alt="calming blue green colors"></img></div>
         </div>
       </div>
     </div>
+
   );
 }
 

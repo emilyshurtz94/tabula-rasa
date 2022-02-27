@@ -6,10 +6,16 @@ import SubstanceUse from '../components/SubstanceUse';
 import DailyReminder from '../components/DailyReminder';
 import Goal from '../components/Goal';
 import Therapy from '../components/Therapy';
+import {QUERY_USER} from '../utils/queries';
+import {useQuery} from '@apollo/client';
 
 
-// function User() {
-    
+function User() {
+const {loading, data} = useQuery(QUERY_USER)
+console.log(data)
 
-
-// export default User
+return (
+    <div></div>
+)
+}
+export default User
