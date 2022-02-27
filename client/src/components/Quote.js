@@ -1,16 +1,37 @@
-// import React from 'react';
-// import useFetch from 'react-fetch-hook';
+import React from "react";
+import quotes from "./quotes.json";
+import _ from "lodash";
 
-// function Quote() {
-    // const { isLoading, error, data } = useFetch("https://zenquotes.io/api/random");
-//     const quoteData = data[0]
-//     const quote = quoteData.q
-//     const author = quoteData.a 
+function Quote() {
+
+  const date = new Date();
+  const today = String(date.getDate()).padStart(2, "0");
+  const isNewDay = localStorage.getItem("date") !== today;
+
+  let quote;
 
 
-//   return (
-//     <div>{quote, author}</div>
-//   )
-// }
+  if (localStorage.getItem("date") && !isNewDay) {
+    // if date exists in local storage AND it is not a new day
 
-// export default Quote
+    quote = localStorage.getItem("quote");
+
+  } else if (!localStorage.getItem("date")) {
+      //if date does NOT exist
+    
+    localStorage.setItem("date", today);
+    localStorage.setItem("quote", JSON.stringify(_.sample(quotes)));
+    quote = localStorage.getItem("quote");
+
+  } else if (localStorage.getItem("date") && isNewDay) {
+      //if date exists in local storage BUT it IS a new day
+    localStorage.setItem("date", today);
+    localStorage.setItem("quote", JSON.stringify(_.sample(quotes)));
+    quote = localStorage.getItem("quote");
+  }
+  console.log(JSON.parse(quote).q, JSON.parse(quote).a)
+  
+  return <div>{JSON.parse(quote).q}{JSON.parse(quote).a}</div>;
+}
+
+export default Quote;
