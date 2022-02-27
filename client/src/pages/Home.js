@@ -22,7 +22,7 @@ function Home() {
           <div className="row">
               <div className="col s4 m4">
                 <div className="icon-block">
-                  <h2 className="center brown-text"><i className="material-icons">flash_on</i></h2>
+                  <h2 className="center brown-text"><i className="material-icons">favorite_border</i></h2>
                   <h5 className="center">Wellness</h5>
                   <p className="light">Tabula Rasa is more than just physical health. Take a wholistic approach to tracking your mental wellness by combining your favorite music, new recipes and workout ideas.</p>
                 </div>
@@ -30,7 +30,7 @@ function Home() {
 
             <div className="col s4 m4">
               <div className="icon-block">
-                <h2 className="center brown-text"><i className="material-icons">group</i></h2>
+                <h2 className="center brown-text"><i className="material-icons">face</i></h2>
                 <h5 className="center">Personalized</h5>
                 <p className="light">Set your own preferences daily to help keep a clear, focused mind. Do you want reminders to meditate? Drink water? Kicking habits? We'll help you track your personal goals. </p>
               </div>
@@ -38,7 +38,7 @@ function Home() {
 
             <div className="col s4 m4">
               <div className="icon-block">
-                <h2 className="center brown-text"><i className="material-icons">settings</i></h2>
+                <h2 className="center brown-text"><i className="material-icons">timeline</i></h2>
                 <h5 className="center">Reflect</h5>
                 <p className="light">Take note of your daily goals. At the end of each month, check your progress and reflect. Work toward your daily goal and remember each day is a clean slate, Tabula Rasa.</p>
               </div>
