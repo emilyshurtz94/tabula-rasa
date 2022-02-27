@@ -31,7 +31,9 @@ function Quote() {
   }
   console.log(JSON.parse(quote).q, JSON.parse(quote).a)
   
-  return <div>{JSON.parse(quote).q}{JSON.parse(quote).a}</div>;
+  return <div>
+    <h4> "{JSON.parse(quote).q}" -{JSON.parse(quote).a} </h4> 
+    </div>;
 }
 
 export default Quote;
