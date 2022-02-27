@@ -1,5 +1,5 @@
 import React from "react";
-// import Quote from "../components/Quote";
+import Quote from "../components/Quote";
 
 function Home() {
 
@@ -15,6 +15,7 @@ function Home() {
               <a className="waves-effect waves-light btn-large">Login</a>
               <a className="waves-effect waves-light btn-large">Signup</a>
             </div>
+            <div><Quote/></div>
           </div>
 
 
@@ -43,6 +44,7 @@ function Home() {
               </div>
             </div>
             <div className="parallax"><img src="./images/gradient-blue.jpg" alt="calming blue green colors"></img></div>
+           
           </div>
 
         </div>
