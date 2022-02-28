@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import Music from '../components/Music';
+import Meals from '../components/Meals'
 import Exercise from '../components/Exercise';
 import Meditation from '../components/Meditation';
 import SubstanceUse from '../components/SubstanceUse';
@@ -14,13 +15,30 @@ const {loading, data} = useQuery(QUERY_USER)
 console.log(data)
 
 return (
-    <div>
-        <Music />
-        <Exercise />
-        <Meditation />
-        <SubstanceUse />
-        <Goal />
-        <Therapy />
+    <div className="conatiner">
+        <div className="row">
+        {
+            data?.me.settings.music && <Music />
+        }
+        {
+            data?.me.settings.meals && <Meals />
+        }
+        {
+            data?.me.settings.exercise && <Exercise />
+        }
+        {
+            data?.me.settings.meditation && <Meditation />
+        }
+        {
+            data?.me.settings.therapy && <Therapy />
+        }
+        {
+            data?.me.settings.goal && <Goal />
+        }
+        {
+            data?.me.settings.substanceUse && <SubstanceUse />
+        }
+        </div>
     </div>
 )
 }
