@@ -51,6 +51,7 @@ export const UPDATE_SETTINGS = gql`
         meditation
         substanceUse
         exercise
+        therapy
       }
     }
   }

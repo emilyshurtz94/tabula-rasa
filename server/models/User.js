@@ -45,7 +45,7 @@ const userSchema = new Schema({
       type:Boolean,
       default:false
     },
-    reminders:{
+    therapy:{
       type:Boolean,
       default:false
     }

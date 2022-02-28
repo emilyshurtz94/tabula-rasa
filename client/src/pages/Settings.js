@@ -9,13 +9,7 @@ export default function Settings() {
     substanceUse: false,
     meditation: false,
     exercise: false,
-    // low: false,
-    // medium: false,
-    // high: false,
-    reminders: false,
-    // drinkWater: false,
-    // meditate: false,
-    // workout: false,
+    therapy: false,
   });
 
   const handleInputChange = (e) => {
@@ -113,11 +107,20 @@ export default function Settings() {
             <span class="lever"></span>
             Yes
           </label>
-
-          <div>
-            <a className="waves-effect waves-light btn-small" onClick={handleFormSubmit} >Submit</a>
-          </div>
         </div>
+        <div class="switch">
+          <label>
+            <h4>Therapy</h4>
+            No
+            <input type="checkbox" onChange={handleInputChange}
+              name="therapy" checked={settingsForm.therapy}></input>
+            <span class="lever"></span>
+            Yes
+          </label>
+        </div>  
+          <div>
+            <a className="waves-effect waves-light btn-small" onClick={handleFormSubmit} href="/user">Submit</a>
+          </div>
       </form>
     </div>
   );
