@@ -17,6 +17,7 @@ export const QUERY_USER = gql`
         substanceUse
         meditation
         exercise
+        therapy
       }
     }
   }

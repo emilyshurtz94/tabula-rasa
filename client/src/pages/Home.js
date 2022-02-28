@@ -1,6 +1,6 @@
 import React from "react";
 import Quote from "../components/Quote";
-import {Link } from "react-router-dom"
+
 
 function Home() {
 
