@@ -15,6 +15,7 @@ const {loading, data} = useQuery(QUERY_USER)
 console.log(data)
 
 return (
+<<<<<<< HEAD
     <div className="conatiner">
         <div className="row">
         {
@@ -40,6 +41,9 @@ return (
         }
         </div>
     </div>
+=======
+    <div></div>
+>>>>>>> f6c4a80502e9a64dbd0d23103f4000d511767a54
 )
 }
 export default User
