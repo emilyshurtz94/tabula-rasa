@@ -3,6 +3,7 @@ import React from 'react'
 function Goal() {
   return (
     <div>
+      <div className='container'>
         <div className="col s6 m6">
               <div className="card">
                 <div className="card-image">
@@ -15,6 +16,7 @@ function Goal() {
                 <div className="card-action">
                 </div>
               </div>
+            </div>
             </div>
     </div>
   )
