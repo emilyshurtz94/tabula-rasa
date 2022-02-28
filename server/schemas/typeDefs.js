@@ -7,7 +7,7 @@ input SettingsInput{
     substanceUse:Boolean
     meditation:Boolean
     exercise:Boolean
-    reminders:Boolean
+    therapy:Boolean
 }
 type User {
     _id: ID
@@ -24,7 +24,7 @@ type Settings{
     substanceUse:Boolean
     meditation:Boolean
     exercise:Boolean
-    reminders:Boolean
+    therapy:Boolean
 }
 
 type dailyFormSchema {
