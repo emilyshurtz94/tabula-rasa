@@ -20,6 +20,9 @@ const [login, {error,data}]= useMutation(LOGIN_USER);
       const {data} = await login(loginFormData);
 
       Auth.login(data.login.token);
+      if(data.login?.token){
+        window.location.href='/user'
+      }
     } catch (e){
       console.error(e)
     }

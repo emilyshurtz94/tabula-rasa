@@ -45,7 +45,13 @@ export const UPDATE_SETTINGS = gql`
       username
       email
       password
-      settings{music}
+      settings{
+        music
+        meals
+        meditation
+        substanceUse
+        exercise
+      }
     }
   }
 `;

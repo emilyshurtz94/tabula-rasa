@@ -6,7 +6,7 @@ export const QUERY_USER = gql`
       _id
       username
       email
-      dailyform {
+      dailyForm {
         formID
         feeling
         createdAt
@@ -14,10 +14,9 @@ export const QUERY_USER = gql`
       settings{
         music
         meals
-        substance
+        substanceUse
         meditation
         exercise
-        reminders
       }
     }
   }

@@ -4,7 +4,7 @@ const typeDefs = gql`
 input SettingsInput{
     music:Boolean
     meals:Boolean
-    substance:Boolean
+    substanceUse:Boolean
     meditation:Boolean
     exercise:Boolean
     reminders:Boolean
@@ -15,13 +15,13 @@ type User {
     email: String!
     password: String!
     dailyForm: [dailyFormSchema]
-    settings: [Settings]
+    settings: Settings
 }
 
 type Settings{
     music:Boolean
     meals:Boolean
-    substance:Boolean
+    substanceUse:Boolean
     meditation:Boolean
     exercise:Boolean
     reminders:Boolean
