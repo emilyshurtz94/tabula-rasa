@@ -6,7 +6,7 @@ export default function Settings() {
   const [settingsForm, setSettingsForm] = useState({
     music: false,
     meals: false,
-    substance: false,
+    substanceUse: false,
     meditation: false,
     exercise: false,
     // low: false,
@@ -29,7 +29,10 @@ export default function Settings() {
   const handleFormSubmit = async (event) => {
     event.preventDefault();
     try {
-      const { data } = await updateSettings({ variables: { input:{...settingsForm} } });
+      const { data } = await updateSettings({ variables: { input: { ...settingsForm } } });
+      if (data) {
+        window.location.href = '/user'
+      }
       console.log(data)
     } catch (e) {
       console.error(e)
@@ -84,7 +87,7 @@ export default function Settings() {
             <input
               type="checkbox"
               onChange={handleInputChange}
-              name="substance use"
+              name="substanceUse"
               checked={settingsForm.substanceUse}
             ></input>
             <span class="lever"></span>
@@ -110,95 +113,7 @@ export default function Settings() {
             <span class="lever"></span>
             Yes
           </label>
-          <label>
-            <h4>Level of Exercise</h4>
-          </label>
-          <p>
-            <label>
-              <input
-                type="checkbox"
-                class="filled-in"
-                onChange={handleInputChange}
-                name="low"
-                checked={settingsForm.low}
-              />
-              <span>Low</span>
-            </label>
-          </p>
-          <p>
-            <label>
-              <input
-                type="checkbox"
-                class="filled-in"
-                onChange={handleInputChange}
-                name="medium"
-                checked={settingsForm.medium}
-              />
-              <span>Medium</span>
-            </label>
-          </p>
-          <p>
-            <label>
-              <input
-                type="checkbox"
-                class="filled-in"
-                onChange={handleInputChange}
-                name="high"
-                checked={settingsForm.high}
-              />
-              <span>High</span>
-            </label>
-          </p>
-        </div>
-        <div class="switch">
-          <label>
-            <h4>Daily Reminders</h4>
-            No
-            <input
-              type="checkbox"
-              onChange={handleInputChange}
-              name="daily reminders"
-              checked={settingsForm.dailyReminders}
-            ></input>
-            <span class="lever"></span>
-            Yes
-          </label>
-          <p>
-            <label>
-              <input
-                type="checkbox"
-                class="filled-in"
-                onChange={handleInputChange}
-                name="drink water"
-                checked={settingsForm.drinkWater}
-              />
-              <span>Drinking Water</span>
-            </label>
-          </p>
-          <p>
-            <label>
-              <input
-                type="checkbox"
-                class="filled-in"
-                onChange={handleInputChange}
-                name="meditate"
-                checked={settingsForm.meditate}
-              />
-              <span>Meditate</span>
-            </label>
-          </p>
-          <p>
-            <label>
-              <input
-                type="checkbox"
-                class="filled-in"
-                onChange={handleInputChange}
-                name="workout"
-                checked={settingsForm.workout}
-              />
-              <span>Workout</span>
-            </label>
-          </p>
+
           <div>
             <a className="waves-effect waves-light btn-small" onClick={handleFormSubmit} >Submit</a>
           </div>

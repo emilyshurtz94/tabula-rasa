@@ -14,7 +14,7 @@ export default function Header() {
     {console.log(Auth.loggedIn())}
       <nav className="white" role="navigation">
         <div className="nav-wrapper">
-          <a href="/" className="brand-logo"><img src="../images/logo100.jpg" alt="logo"></img></a>
+          <a href="/" className="brand-logo"><img src="../images/logo100.jpg" height="63px" alt="logo"></img></a>
           <ul id="nav-mobile" className="right hide-on-med-and-down">
             {Auth.loggedIn() ? (<li onClick={logout}><a>Logout</a></li>) :(<li><a href='/login'>Login</a></li>)}
             <li><a href="/user">Profile</a></li>

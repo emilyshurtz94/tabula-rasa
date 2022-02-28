@@ -33,7 +33,7 @@ const userSchema = new Schema({
       type:Boolean,
       default:false
     },
-    substance:{
+    substanceUse:{
       type:Boolean,
       default:false
     },
