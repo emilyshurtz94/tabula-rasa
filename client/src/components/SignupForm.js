@@ -22,26 +22,15 @@ const SignupForm = () => {
   const handleFormSubmit = async (event) => {
     event.preventDefault();
 
-    // check if form has everything (as per react-bootstrap docs)
-    // const form = event.currentTarget;
-    // if (form.checkValidity() === false) {
-    //   event.preventDefault();
-    //   event.stopPropagation();
-    // }
 
     try {
-      // const response = await createUser(userFormData);
 
-      // if (!response.ok) {
-      //   throw new Error('something went wrong!');
-      // }
-
-      // const { token, user } = await response.json();
-      // console.log(user);
-      // Auth.login(token);
       const {data} = await addUser({ variables: {...signUpData}});
-      Auth.login(data.addUser.token)
-
+      console.log(data)
+      Auth.login(data.signUp.token)
+      if(data.signUp?.token){
+        window.location.href='/settings'
+      }
     } catch (e) {
       console.error(e);
     }
@@ -59,24 +48,24 @@ const SignupForm = () => {
     <form className="col s12">
       <div className="row">
         <div className="input-field col s6">
-          <input placeholder="Placeholder" id="username" type="text" className="validate" value={signUpData.username}></input>
+          <input placeholder="Placeholder" id="username" type="text" className="validate" value={signUpData.username} onChange ={handleChange} name="username"></input>
           <label for="username">Username</label>
         </div>
       </div>
       <div className="row">
         <div className="input-field col s12">
-          <input id="password" type="password" className="validate" value={signUpData.password}></input>
+          <input id="password" type="password" className="validate" value={signUpData.password} onChange ={handleChange} name="password"></input>
           <label for="password">Password</label>
         </div>
       </div>
       <div className="row">
         <div className="input-field col s12">
-          <input id="email" type="email" className="validate" value={signUpData.email}></input>
+          <input id="email" type="email" className="validate" value={signUpData.email} onChange ={handleChange} name="email"></input>
           <label for="email">Email</label>
         </div>
       </div>
       <div>
-      <a className="waves-effect waves-light btn-small">Submit</a>
+      <a className="waves-effect waves-light btn-small" onClick={handleFormSubmit} >Submit</a>
       </div>
     </form>
   </div>

@@ -7,7 +7,6 @@ const LoginForm = () => {
   const [loginFormData, setLoginFormData] = useState({ username: '', password: '' });
 const [login, {error,data}]= useMutation(LOGIN_USER);
 
-  // const [loginUser, { error }] = useMutation(LOGIN_USER);
 
   const handleChange = (event) => {
     const { name, value } = event.target;
@@ -18,7 +17,7 @@ const [login, {error,data}]= useMutation(LOGIN_USER);
     event.preventDefault();
 
     try {
-      const {response} = await login(loginFormData);
+      const {data} = await login(loginFormData);
 
       Auth.login(data.login.token);
     } catch (e){
@@ -31,34 +30,24 @@ const [login, {error,data}]= useMutation(LOGIN_USER);
     });
   };
 
-    //   if (!response.ok) {
-    //     throw new Error('something went wrong!');
-    //   }
-
-    //   const { token, user } = await response.json();
-    //   console.log(user);
-    //   Auth.login(token);
-    // } catch (err) {
-    //   console.error(err);
-    //   setShowAlert(true);
   return (
     <>
   <div className="row">
     <form className="col s12">
       <div className="row">
         <div className="input-field col s6">
-          <input placeholder="Username" id="username" type="text" className="validate" value={loginFormData.username} onChange={handleChange}></input>
+          <input placeholder="Username" id="username" type="text" className="validate" value={loginFormData.username} onChange={handleChange} name='username'></input>
           <label htmlFor="username">Username</label>
         </div>
       </div>
       <div className="row">
         <div className="input-field col s12">
-          <input id="password" type="password" className="validate" value={loginFormData.password} onChange={handleChange}></input>
+          <input id="password" type="password" className="validate" value={loginFormData.password} onChange={handleChange} name='password'></input>
           <label htmlFor="password">Password</label>
         </div>
       </div>
       <div>
-      <a className="waves-effect waves-light btn-small">login</a>
+      <a className="waves-effect waves-light btn-small" onClick={handleFormSubmit}>login</a>
       </div>
     </form>
   </div>

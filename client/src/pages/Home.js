@@ -1,5 +1,6 @@
 import React from "react";
 import Quote from "../components/Quote";
+import {Link } from "react-router-dom"
 
 function Home() {
 
@@ -12,8 +13,8 @@ function Home() {
             <h1 className="header center grey-text text-lighten-2">Welcome Guest.</h1>
             <div className="row center">
               <h5 className="header col s12 light">Each day is a clean slate.</h5>
-              <a className="waves-effect waves-light btn-large">Login</a>
-              <a className="waves-effect waves-light btn-large">Signup</a>
+              <a href="/login" className="waves-effect waves-light btn-large">Login</a>
+              <a href="/signup"className="waves-effect waves-light btn-large">Signup</a>
             </div>
             <div><Quote/></div>
           </div>

@@ -51,12 +51,13 @@ const resolvers = {
       }
        throw new AuthenticationError( 'You need to be logged in!'  );
     },
-    updateSettings: async (parent, {settingsData}, context) =>{
+    updateSettings: async (parent, {input}, context) =>{
       if(context.user){
         return User.findOneAndUpdate({_id: context.user._id},
-          {settings:{settingsData}}
+          {settings:{...input}}, {new:true}
           )
       }
+      console.log(input)
     },
     addDailyForm: async (parent, {dailyFormSchema}, context) =>{
       if(context.user){
