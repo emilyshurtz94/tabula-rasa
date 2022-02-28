@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import Music from '../components/Music';
 import Meals from '../components/Meals'
 import Exercise from '../components/Exercise';
@@ -6,13 +6,13 @@ import Meditation from '../components/Meditation';
 import SubstanceUse from '../components/SubstanceUse';
 import Goal from '../components/Goal';
 import Therapy from '../components/Therapy';
-import {QUERY_USER} from '../utils/queries';
-import {useQuery} from '@apollo/client';
+import { QUERY_USER } from '../utils/queries';
+import { useQuery } from '@apollo/client';
 
 
 function User() {
-const {loading, data} = useQuery(QUERY_USER)
-console.log(data)
+    const { loading, data } = useQuery(QUERY_USER)
+    console.log(data)
 
 return (
     <div className="conatiner">
@@ -40,6 +40,11 @@ return (
         }
         </div>
     </div>
+<<<<<<< HEAD
 )
+=======
+
+    )
+>>>>>>> d4a343caa1ecba5497be7b22dfe8061048d28689
 }
 export default User
