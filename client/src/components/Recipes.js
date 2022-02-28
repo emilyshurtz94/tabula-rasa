@@ -1,14 +1,25 @@
 import React from "react";
-import useFetch from "react-fetch-hook";
 
-function Recipes() {
-    const { isLoading, error, data } = useFetch ("https://api.spoonacular.com/recipes/random?&apiKey=d6c7c93a8a3a43d9a16c1a45b1c0b349");
-    const recipeData = data [0];
+export default class Recipes extends React.Component {
   
-    if (isLoading) return "Loading...";
-    if (error) return "Error!";
-    
-  return <div></div>;
-}
+  state = {
+      loading: true 
+    }
 
-export default Recipes;
+  async componentDidMount() {
+    const url = "https://api.spoonacular.com/recipes/random?&apiKey=d6c7c93a8a3a43d9a16c1a45b1c0b349";
+    const response = await fetch(url);
+    const data = await response.json();
+    console.log(data);
+  }
+  
+  
+  
+  render(){
+    return ( <div>
+      {this.state.loading ? <div>loading...</div> : <div>recipe..</div>}
+    </div>
+    );
+  }
+    
+}
