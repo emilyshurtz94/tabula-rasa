@@ -1,21 +1,21 @@
-
 import React, { useState } from "react";
+import { UPDATE_SETTINGS } from "../utils/mutations";
+import { useMutation } from "@apollo/client";
 
 export default function Settings() {
   const [settingsForm, setSettingsForm] = useState({
     music: false,
     meals: false,
-    substanceUse: false,
+    substance: false,
     meditation: false,
     exercise: false,
-    exerciseLevel: false,
-    low: false,
-    medium: false,
-    high: false,
-    dailyReminders: false,
-    drinkWater: false,
-    meditate: false,
-    workout: false,
+    // low: false,
+    // medium: false,
+    // high: false,
+    reminders: false,
+    // drinkWater: false,
+    // meditate: false,
+    // workout: false,
   });
 
   const handleInputChange = (e) => {
@@ -24,7 +24,17 @@ export default function Settings() {
     console.log(settingsForm);
   };
 
+  const [updateSettings, { error, data }] = useMutation(UPDATE_SETTINGS);
 
+  const handleFormSubmit = async (event) => {
+    event.preventDefault();
+    try {
+      const { data } = await updateSettings({ variables: { input:{...settingsForm} } });
+      console.log(data)
+    } catch (e) {
+      console.error(e)
+    }
+  }
   const hStyle = {
     alignItems: "center",
   };
@@ -109,7 +119,7 @@ export default function Settings() {
                 type="checkbox"
                 class="filled-in"
                 onChange={handleInputChange}
-              name="low"
+                name="low"
                 checked={settingsForm.low}
               />
               <span>Low</span>
@@ -121,7 +131,7 @@ export default function Settings() {
                 type="checkbox"
                 class="filled-in"
                 onChange={handleInputChange}
-              name="medium"
+                name="medium"
                 checked={settingsForm.medium}
               />
               <span>Medium</span>
@@ -133,7 +143,7 @@ export default function Settings() {
                 type="checkbox"
                 class="filled-in"
                 onChange={handleInputChange}
-              name="high"
+                name="high"
                 checked={settingsForm.high}
               />
               <span>High</span>
@@ -159,7 +169,7 @@ export default function Settings() {
                 type="checkbox"
                 class="filled-in"
                 onChange={handleInputChange}
-              name="drink water"
+                name="drink water"
                 checked={settingsForm.drinkWater}
               />
               <span>Drinking Water</span>
@@ -171,7 +181,7 @@ export default function Settings() {
                 type="checkbox"
                 class="filled-in"
                 onChange={handleInputChange}
-              name="meditate"
+                name="meditate"
                 checked={settingsForm.meditate}
               />
               <span>Meditate</span>
@@ -183,12 +193,15 @@ export default function Settings() {
                 type="checkbox"
                 class="filled-in"
                 onChange={handleInputChange}
-              name="workout"
+                name="workout"
                 checked={settingsForm.workout}
               />
               <span>Workout</span>
             </label>
           </p>
+          <div>
+            <a className="waves-effect waves-light btn-small" onClick={handleFormSubmit} >Submit</a>
+          </div>
         </div>
       </form>
     </div>
