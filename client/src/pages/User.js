@@ -14,14 +14,7 @@ const {loading, data} = useQuery(QUERY_USER)
 console.log(data)
 
 return (
-    <div>
-        <Music />
-        <Exercise />
-        <Meditation />
-        <SubstanceUse />
-        <Goal />
-        <Therapy />
-    </div>
+    <div></div>
 )
 }
 export default User
