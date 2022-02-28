@@ -50,7 +50,7 @@ type Mutation {
     login(username: String!, password: String!): Auth
     removeUser: User
     updateSettings(input: SettingsInput!): User
-    addDailyForm:(dailyForm: dailyFormSchema!): User
+    addDailyForm(createdAt: String!, feeling: Int!): User
   }`;
 
 module.exports = typeDefs;
