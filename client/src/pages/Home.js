@@ -10,7 +10,7 @@ function Home() {
         <div className="section no-pad-bot">
 
           <div className="container">
-            <h1 className="header center grey-text text-lighten-2">Welcome Guest.</h1>
+            <h1 className="header center grey-text text-lighten-2">Tabula Rasa</h1>
             <div className="row center">
               <h5 className="header col s12 light">Each day is a clean slate.</h5>
               <a href="/login" className="waves-effect waves-light btn-large">Login</a>
