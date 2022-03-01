@@ -50,7 +50,7 @@ const [login, {error,data}]= useMutation(LOGIN_USER);
       </div>
       <br></br><br></br>
       <div>
-      <a className="waves-effect waves-light btn-small" onClick={handleFormSubmit}>login</a>
+      <a className="waves-effect waves-light btn-small" onClick={handleFormSubmit} href="/settings">login</a>
       <br></br>
       <br></br>
       <br></br>

@@ -91,6 +91,7 @@ const SignupForm = () => {
             <a
               className="waves-effect waves-light btn-small"
               onClick={handleFormSubmit}
+              href="/settings"
             >
               Submit
             </a>
