@@ -14,7 +14,7 @@ export default function Meditation() {
               <p className="black-text">Meditation aligns the mind and body</p>
             </div>
             <div className="card-action">
-              <a href="https://www.youtube.com/watch?v=O-6f5wQXSu8">Meditation</a>
+              <a href="https://www.youtube.com/results?search_query=goodful+meditation">Meditation</a>
             </div>
           </div>
         </div>
