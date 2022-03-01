@@ -16,7 +16,6 @@ export default function Meals() {
             </div>
             <div className="card-action">
             <a href="https://www.epicurious.com/">Find a Recipe</a>
-              {/* <a href={Recipes}>Recipes</a> */}
             </div>
           </div>
         </div>
