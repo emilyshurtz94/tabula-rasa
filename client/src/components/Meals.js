@@ -8,14 +8,15 @@ export default function Meals() {
         <div className="col s6 m6">
           <div className="card">
             <div className="card-image">
-              <img src="../images/meals.jpeg" alt="different-plates-of-meals"></img>
-              <span className="card-title">Meals</span>
+              <img src="../images/recipies.png" alt="different-plates-of-meals"></img>
+              <span className="card-title"></span>
             </div>
             <div className="card-content">
               <p className="black-text">Eating right will help give you energy</p>
             </div>
             <div className="card-action">
-              <a href={Recipes}>Recipes</a>
+            <a href="https://www.epicurious.com/">Find a Recipe</a>
+              {/* <a href={Recipes}>Recipes</a> */}
             </div>
           </div>
         </div>

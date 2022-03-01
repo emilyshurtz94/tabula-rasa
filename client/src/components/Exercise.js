@@ -7,8 +7,8 @@ function Exercise() {
         <div className="col s6 m6">
           <div className="card">
             <div className="card-image">
-              <img src="../images/exercise.jpeg" alt="exercising"></img>
-              <span className="card-title">Exercise</span>
+              <img src="../images/exercise.png" alt="exercising"></img>
+              <span className="card-title"></span>
             </div>
 
             <div className="card-content">
