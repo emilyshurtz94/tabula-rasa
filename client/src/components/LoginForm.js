@@ -37,9 +37,9 @@ const [login, {error,data}]= useMutation(LOGIN_USER);
   <div className="row">
     <form className="col s12">
       <div className="row">
-        <div className="input-field col s6">
+        <div className="input-field col s12">
           <input placeholder="Username" id="username" type="text" className="validate" value={loginFormData.username} onChange={handleChange} name='username'></input>
-          <label htmlFor="username">Username</label>
+          {/* <label htmlFor="username">Username</label> */}
         </div>
       </div>
       <div className="row">
@@ -48,8 +48,24 @@ const [login, {error,data}]= useMutation(LOGIN_USER);
           <label htmlFor="password">Password</label>
         </div>
       </div>
+      <br></br><br></br>
       <div>
       <a className="waves-effect waves-light btn-small" onClick={handleFormSubmit}>login</a>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
       </div>
     </form>
   </div>

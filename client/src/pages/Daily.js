@@ -30,12 +30,12 @@ export default function Daily() {
   };
 
   return (
-    <div className="container ">
+    <div className="container">
       <div id="index-banner" className="parallax-container">
         <div className="section no-pad-bot">
           <div className="container">
             <br></br>
-            <h1 className="header center grey-text text-lighten-2">
+            <h1 className="header center grey-text text-2">
               How are you today?
             </h1>
             <div className="col">
@@ -161,12 +161,6 @@ export default function Daily() {
               </a>
             </div>
             <br></br>
-            <div className="parallax">
-              <img
-                src="gradient-blue.jpg"
-                alt="calming blue green colors"
-              ></img>
-            </div>
           </div>
         </div>
       </div>
