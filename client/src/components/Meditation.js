@@ -7,8 +7,8 @@ export default function Meditation() {
         <div className="col s6 m6">
           <div className="card">
             <div className="card-image">
-              <img src="../images/meditation.avif" alt="meditating-person"></img>
-              <span className="card-title">Meditation</span>
+              <img src="../images/meditate.png" alt="meditating-person"></img>
+              <span className="card-title"></span>
             </div>
             <div className="card-content">
               <p className="black-text">Meditation aligns the mind and body</p>

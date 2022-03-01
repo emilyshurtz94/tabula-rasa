@@ -9,8 +9,8 @@ export default function Music() {
         <div className="col s6 m6">
           <div className="card">
             <div className="card-image">
-              <img src="../images/music.jpeg" alt="waves-relaxation-music"></img>
-              <span className="card-title">Music</span>
+              <img src="../images/music.png" alt="waves-relaxation-music"></img>
+              <span className="card-title"></span>
             </div>
             <div className="card-content">
               <p className="black-text"> Music can calm the mind and soul</p>
