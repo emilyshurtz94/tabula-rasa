@@ -40,11 +40,6 @@ return (
         }
         </div>
     </div>
-<<<<<<< HEAD
 )
-=======
-
-    )
->>>>>>> d4a343caa1ecba5497be7b22dfe8061048d28689
 }
 export default User
