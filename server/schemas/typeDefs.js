@@ -30,7 +30,7 @@ type Settings{
 type dailyFormSchema {
     formID: ID
     createdAt: String
-    feeling: Int
+    feeling: Boolean
 }
 
 type Auth {
