@@ -32,7 +32,7 @@ function Quote() {
   console.log(JSON.parse(quote).q, JSON.parse(quote).a)
   
   return <div>
-    <h4> "{JSON.parse(quote).q}" -{JSON.parse(quote).a} </h4> 
+    <h3> "{JSON.parse(quote).q}" -{JSON.parse(quote).a} </h3> 
     </div>;
 }
 
