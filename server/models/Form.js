@@ -8,7 +8,7 @@ const dailyFormSchema = new Schema({
   },
 
   feeling:{
-    type:Number
+    type: Boolean
   },
 
   createdAt:{
