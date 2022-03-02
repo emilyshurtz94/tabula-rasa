@@ -20,7 +20,7 @@ export default function Header() {
             {Auth.loggedIn() ? (<li onClick={logout}><a>Logout</a></li>) :(<li><a href='/login'>Login</a></li>)}
             {Auth.loggedIn() ? (<li><a href="/user">Profile</a></li>) : (<li><a href="/">Profile</a></li>)}
             {Auth.loggedIn() ? (<li><a href="/daily">Daily Question</a></li>) : (<li><a href="/">Daily Question</a></li>)}
-            {Auth.loggedIn() ? (<li><a href='/recap'>Monthly Recap</a></li>) : (<li><a href='/'>Monthly Recap</a></li>)}
+            {/* {Auth.loggedIn() ? (<li><a href='/recap'>Monthly Recap</a></li>) : (<li><a href='/'>Monthly Recap</a></li>)} */}
             {Auth.loggedIn() ? (<li><a href='/settings'>Change Preferences</a></li>) : (<li><a href='/'>Change Preferences</a></li>)}
           </ul>
         </div>
