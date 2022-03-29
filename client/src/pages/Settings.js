@@ -39,16 +39,20 @@ export default function Settings() {
   const containerStyle = {
     flexWrap: "wrap",
   };
+
+  const textStyle = {
+    color: "black",
+  };
   return (
     <div class="container" style={containerStyle}>
       <form>
         <div class="title">
-          <h2 style={hStyle}>Customize your Page</h2>
-          <h3 style={hStyle}>Select what you need to help you everyday</h3>
+          <h6 style={hStyle}>Select your preferred wellness activites to help you reach your goals today.</h6>
+    
         </div>
         <div class="switch">
           <label>
-            <h4>Music</h4>
+            <h5 style = {textStyle}>Music</h5>
             No
             <input
               type="checkbox"
@@ -62,7 +66,7 @@ export default function Settings() {
         </div>
         <div class="switch">
           <label>
-            <h4>Meals</h4>
+            <h5 style = {textStyle}>Meals</h5>
             No
             <input
               type="checkbox"
@@ -76,7 +80,7 @@ export default function Settings() {
         </div>
         <div class="switch">
           <label>
-            <h4>Substance Use</h4>
+            <h5 style = {textStyle}>Sobriety Calculator</h5>
             No
             <input
               type="checkbox"
@@ -90,7 +94,7 @@ export default function Settings() {
         </div>
         <div class="switch">
           <label>
-            <h4>Meditation</h4>
+            <h5 style = {textStyle}>Meditation</h5>
             No
             <input type="checkbox" onChange={handleInputChange}
               name="meditation" checked={settingsForm.meditation}></input>
@@ -100,7 +104,7 @@ export default function Settings() {
         </div>
         <div class="switch">
           <label>
-            <h4>Exercise</h4>
+            <h5 style = {textStyle}>Exercise</h5>
             No
             <input type="checkbox" onChange={handleInputChange}
               name="exercise" checked={settingsForm.exercise}></input>
@@ -110,7 +114,7 @@ export default function Settings() {
         </div>
         <div class="switch">
           <label>
-            <h4>Therapy</h4>
+            <h5 style = {textStyle}>Therapy</h5>
             No
             <input type="checkbox" onChange={handleInputChange}
               name="therapy" checked={settingsForm.therapy}></input>
@@ -118,9 +122,11 @@ export default function Settings() {
             Yes
           </label>
         </div>  
+        <br></br>
           <div>
             <a className="waves-effect waves-light btn-small" onClick={handleFormSubmit} href="/user">Submit</a>
           </div>
+          <br></br>
       </form>
     </div>
   );
